@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useState , useEffect } from 'react';
 import './header.css';
-import schoolLogo from '../../all img/unnamed.png'
+import schoolLogo from '../../all img/unnamed.png';
+
 
 
 
 const Header = () => {
+    const [users , setUser] = useState([])
+        useEffect( ()=>{
+            fetch('https://immehadi7.github.io/jsonapi/donerList.json')
+            .then(res => res.json() )
+            .then(data => setUser(data))
+        } ,[])
+
     return (
         <div>
+            <div>
             <nav className="navbar navbar-expand-lg navbar-light nav-styles">
-  <div className="container-fluid">
+      <div className="container-fluid">
     <a className="navbar-brand navbar-img" href="#">
         <img src= {schoolLogo} alt="" />
     </a>
@@ -39,9 +48,18 @@ const Header = () => {
       
     </div>
   </div>
-</nav>
-            
+</nav>           
+ </div>
+        <div className='another-header'>
+            <h1>There is upcoming event . So , we need some doner </h1>
+            <h2>Total Budget for event : $10000 </h2>
         </div>
+              {
+                  users.map( user=>  )
+              }
+        
+        
+                </div>
     );
 };
 

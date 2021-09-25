@@ -1,6 +1,6 @@
 .nav-styles{
-    background-color: #0303f5;
-    color: #000000;
+    background-color: #3d3dfa;
+    color: #fafafa;
     font-weight: 600;
 }
 .navbar-img{
@@ -18,4 +18,9 @@
 }
 .custom-bg{
     background-color: white;
+}
+.another-header{
+    text-align: center;
+    margin: 20px;
+    background-color: rgb(215, 219, 243);
 }
