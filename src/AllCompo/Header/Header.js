@@ -1,17 +1,13 @@
-import React, { useState , useEffect } from 'react';
+import React from 'react';
 import './header.css';
 import schoolLogo from '../../all img/unnamed.png';
+import UserShow from '../UserShow/UserShow';
 
 
 
 
 const Header = () => {
-    const [users , setUser] = useState([])
-        useEffect( ()=>{
-            fetch('https://immehadi7.github.io/jsonapi/donerList.json')
-            .then(res => res.json() )
-            .then(data => setUser(data))
-        } ,[])
+   
 
     return (
         <div>
@@ -54,10 +50,7 @@ const Header = () => {
             <h1>There is upcoming event . So , we need some doner </h1>
             <h2>Total Budget for event : $10000 </h2>
         </div>
-              {
-                  users.map( user=>  )
-              }
-        
+             
         
                 </div>
     );

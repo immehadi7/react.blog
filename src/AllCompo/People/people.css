@@ -1,0 +1,8 @@
+.peopleShow{
+    display: grid;
+    grid-template-columns: repeat(3fr, 1);
+}
+.peopleShow img{
+    width: 300px ;
+    max-width: 100%;
+}
