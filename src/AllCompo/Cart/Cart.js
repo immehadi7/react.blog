@@ -7,7 +7,7 @@ const Cart = (props) => {
     let {cart} = props;
         let total = 0 ;
             for(let manSalary of cart){
-                total = total + manSalary.salary  ;
+                 total = total + parseFloat(manSalary.salary ) ;
             }
     return (
         <div>
@@ -20,6 +20,7 @@ const Cart = (props) => {
                 <ul>
                     {
                         cart.map(donar => <li className="list" >
+                            <span>{donar.key}</span>
                              <span>{donar.name}</span>
                         </li>)
                     }
