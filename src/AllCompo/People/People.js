@@ -30,6 +30,7 @@ const People = (props) => {
 
     <button  onClick={() => props.handleAddToCart(props.user)}
      class="btn btn-primary" > {element} Add to Cart</button>
+     
   </div>
 </div>
 

@@ -12,8 +12,10 @@ const UserShow = () => {
         .then(data => setUser(data))
     } ,[])
     const handleAddToCart = (user) => {
+        console.log(user.salary)
         const newCart = [...cart, user];
         setCart(newCart);
+       
     }
     return (
         <div > 
@@ -23,12 +25,14 @@ const UserShow = () => {
                                 <div  className="row g-4 ms-5">
                                 {
                             users.map( user=>  <People  
-                                key={user.key}
+                                key={user.key} 
                                 handleAddToCart={handleAddToCart}
                                 user={user} 
                             ></People> )
-                                    } 
+                                    }
+
                                 </div>
+                                
                             </div>
                             <div className='col-md-3'>
                                 <Cart cart={cart}></Cart>

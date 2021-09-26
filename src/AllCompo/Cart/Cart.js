@@ -2,12 +2,12 @@ import React from 'react';
 import AddDonar from '../addDonar/AddDonar';
 import './cart.css'
 const Cart = (props) => {
- /*    const { cart } = props;
+    /* const { cart } = props;
     const total = cart.reduce((previous, location) => previous + location.salary, 0); */
     let {cart} = props;
         let total = 0 ;
-            for(let salary of cart){
-                total = total+props.salary
+            for(let manSalary of cart){
+                total = total + manSalary.salary  ;
             }
     return (
         <div>
