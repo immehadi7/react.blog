@@ -1,9 +1,12 @@
 import React from 'react';
 import './people.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {  faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 const People = (props) => {
     console.log(props.user)
-    const {name , age ,img ,profession, salary , country} = props.user 
+    const {name , age ,img ,profession, salary , country} = props.user ;
+    const element = <FontAwesomeIcon icon={faShoppingCart} />
     return (
         
                  <div className='col-md-4 peopleShow'>
@@ -17,7 +20,7 @@ const People = (props) => {
                    <h4 className='card-title' >Salary: {salary} </h4>
 
 
-    <a href="#" class="btn btn-primary">Add to Cart</a>
+    <a href="#" class="btn btn-primary" > {element} Add to Cart</a>
   </div>
 </div>
 
