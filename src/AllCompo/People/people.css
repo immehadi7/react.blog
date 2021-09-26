@@ -9,8 +9,10 @@
     height: 150px;
     max-width: 100%;
 }
-.peopleSecondPart{
-
-  
-  
+.icon-style{
+    font-size: 30px;
+}
+.icon-style a:hover{
+    color: navy;
+    font-size: 32px;
 }

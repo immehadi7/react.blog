@@ -1,12 +1,15 @@
 import React from 'react';
 import './people.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import {  faShoppingCart  } from '@fortawesome/free-solid-svg-icons';
+import {  faFacebook , faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const People = (props) => {
     console.log(props.user)
     const {name , age ,img ,profession, salary , country} = props.user ;
     const element = <FontAwesomeIcon icon={faShoppingCart} />
+    const fbIcon = <FontAwesomeIcon icon={faFacebook} />
+    const twitIcon = <FontAwesomeIcon icon={faTwitter} />
     return (
         
                  <div className='col-md-4 peopleShow'>
@@ -18,7 +21,12 @@ const People = (props) => {
               <h2 className="card-title"> Country: {country} </h2>
                    <h6 className="card-text">Age:{age}</h6>
                    <h4 className='card-title' >Salary: {salary} </h4>
+                   <div className='icon-style'>
+                   <a href="#" > {fbIcon} </a>
+                   { <a href="#" > {twitIcon} </a>}
 
+                   </div>
+               
 
     <a href="#" class="btn btn-primary" > {element} Add to Cart</a>
   </div>
