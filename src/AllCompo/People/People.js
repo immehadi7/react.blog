@@ -20,15 +20,16 @@ const People = (props) => {
           <h2 className="card-title">Profession: {profession} </h2>
               <h2 className="card-title"> Country: {country} </h2>
                    <h6 className="card-text">Age:{age}</h6>
-                   <h4 className='card-title' >Salary: {salary} </h4>
+                   <h4 className='card-title' > Donation Amount : $ {salary} </h4>
                    <div className='icon-style'>
-                   <a href="#" > {fbIcon} </a>
-                   { <a href="#" > {twitIcon} </a>}
+                       <a href="#" > {fbIcon} </a>
+                       { <a href="#" > {twitIcon} </a>}
 
                    </div>
                
 
-    <a href="#" class="btn btn-primary" > {element} Add to Cart</a>
+    <button  onClick={() => props.handleAddToCart(props.user)}
+     class="btn btn-primary" > {element} Add to Cart</button>
   </div>
 </div>
 
