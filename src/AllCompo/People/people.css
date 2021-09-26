@@ -1,8 +1,16 @@
 .peopleShow{
-    display: grid;
-    grid-template-columns: repeat(3fr, 1);
+  
+    
+    
+     
 }
 .peopleShow img{
-    width: 300px ;
+    width: 250px ;
+    height: 150px;
     max-width: 100%;
+}
+.peopleSecondPart{
+
+  
+  
 }

@@ -47,8 +47,8 @@ const Header = () => {
 </nav>           
  </div>
         <div className='another-header'>
-            <h1>There is upcoming event . So , we need some doner </h1>
-            <h2>Total Budget for event : $10000 </h2>
+            <h1>There is a upcoming event . So , we need some donar </h1>
+            <h2>Total Budget for event : $100000 </h2>
         </div>
              
         

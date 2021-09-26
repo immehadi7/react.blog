@@ -11,19 +11,23 @@ const UserShow = () => {
     } ,[])
     return (
         <div > 
-             <div className='user-part'>
-                    <div className='donar-part'>
-                    {
-                     users.map( user=>  <People  user={user} ></People> )
-                     }
+             <div className=''>
+                    <div className='row '>
+                            <div className="col-md-9">
+                                <div  className="row g-4 ms-5">
+                                {
+                            users.map( user=>  <People  user={user} ></People> )
+                                    } 
+                                </div>
+                            </div>
+                            <div className='col-md-3'>
+                                <h3>Money</h3>
+                           </div>
+                    
                    </div>
-                     <div className='donar-money'>
-                         <h3>Money</h3>
-                     </div>
+                     
             </div>
 
-            {/* 
-             */}
 
 
             </div>

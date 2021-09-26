@@ -1,41 +1,32 @@
 import React from 'react';
-import './people.css'
+import './people.css';
 
 const People = (props) => {
     console.log(props.user)
     const {name , age ,img ,profession, salary , country} = props.user 
     return (
-        <div>
-            
-            <div  >
-                    
-                  {/*   <img src={img} alt="..."/>    
-                   <h5 > Name:{name} </h5>
-                     <h6>Age:{age}</h6>
-                     <h3>Profession: {profession} </h3>
-                         <h3>Country: {country} </h3>
-                             <h4>Salary: {salary} </h4> */}
-                    
-             
+        
+                 <div className='col-md-4 peopleShow'>
+            <div className="card" style={{width: '18rem'}}>
+         <img className="card-img-top" src={img} alt="Card image cap"/>
+         <div className="card-body">
+       <h2 className="card-title"> Name:{name} </h2>
+          <h2 className="card-title">Profession: {profession} </h2>
+              <h2 className="card-title"> Country: {country} </h2>
+                   <h6 className="card-text">Age:{age}</h6>
+                   <h4 className='card-title' >Salary: {salary} </h4>
 
-             <div className="row row-col-3 peopleShow">
-                 <div className="col-3">
-                  <div className="card h-100">
-                   <img src={img} alt="..."/>
-                   
-                      <h5 > Name:{name} </h5>
-                        <h6>Age:{age}</h6>
-                        <h3>Profession: {profession} </h3>
-                            <h3>Country: {country} </h3>
-                                <h4>Salary: {salary} </h4>
-                          
-                             </div>
-                                 </div>
-                                         </div>  
-                                         </div>
+
+    <a href="#" class="btn btn-primary">Add to Cart</a>
+  </div>
+</div>
+
+        </div>
+        
+       
+         
                                            
-                                                 </div>
-                                                    
+                                                                                     
     );
 };
 

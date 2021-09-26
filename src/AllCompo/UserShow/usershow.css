@@ -1,11 +1,9 @@
 .user-part{
-    display: grid;
-    grid-template-columns: 4fr 1fr;
+  
     
 }
 .donar-part{
     
-        display: grid;
-        grid-template-columns: repeat(3fr , 1);
+        
     
 }
