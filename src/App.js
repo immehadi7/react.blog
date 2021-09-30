@@ -1,18 +1,49 @@
-
-import Header from './AllCompo/Header/Header';
-import UserShow from './AllCompo/UserShow/UserShow';
+import logo from './logo.svg';
 import './App.css';
+import Rechart from './compo/Rechart';
+import { Line, LineChart } from 'recharts';
+import { BrowserRouter , Switch , Route, Link  } from 'react-router-dom';
+import Header from './compo/Header/Header';
+import NotFund from './compo/Not Found/NotFund';
+import About from './About/About';
+import NavMeanu from './NavMeanu/NavMeanu';
+import UserDetail from './UserDetail/UserDetail';
+
 
 function App() {
+ 
   return (
-    <div>
-      <Header></Header>
-      <UserShow></UserShow>
-    </div>
-      /* Note: just because of electricity problem I am unable to submit in right time , there is no electricity in my area for 9am to 8pm , now I have a lot to do for assignment 8 , kindly oblige me , I am very nearby average marks ,I have to submit late becuase electricity problem, I am very sorry  */
 
+    <div>
+     
+      <BrowserRouter> 
+        <NavMeanu></NavMeanu>
+      <Switch>
+           <Route path='/header'>
+            <Header></Header>
+            </Route>
+             <Route exact path='/'>
+                <Header></Header>
+            </Route> 
+            <Route path='/notfound'>
+                <NotFund></NotFund>
+            </Route>
+            <Route path='/about'>
+              <About></About>
+            </Route>
+            <Route path="/:id">
+              <UserDetail></UserDetail>
+            </Route>
+        </Switch>
+      </BrowserRouter>
+      
+    </div>
    
-  );
-}
+  );         
+};
 
 export default App;
+
+
+
+
