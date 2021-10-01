@@ -3,9 +3,9 @@ import React from 'react';
 const About = () => {
     return (
         <div>
-           <h1>this is about page</h1> 
+            <h1>About of this page coming soon</h1>
         </div>
     );
 };
 
-export default About
+export default About;

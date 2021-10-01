@@ -1,0 +1,9 @@
+.postStyle{
+   /*  background-color: lightblue;
+    border: 2px solid blue;
+    color: black;
+ */
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ grid-gap: 10px ;
+}

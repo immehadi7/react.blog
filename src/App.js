@@ -1,49 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
-import Rechart from './compo/Rechart';
-import { Line, LineChart } from 'recharts';
-import { BrowserRouter , Switch , Route, Link  } from 'react-router-dom';
-import Header from './compo/Header/Header';
-import NotFund from './compo/Not Found/NotFund';
-import About from './About/About';
-import NavMeanu from './NavMeanu/NavMeanu';
-import UserDetail from './UserDetail/UserDetail';
 
+import './App.css';
+import FirstCompo from './AllCompo/FirstCompo/FirstCompo';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Navlink from './AllCompo/Navlink/Navlink';
+import About from './AllCompo/About/About';
+import Contact from './Contact/Contact';
+import BlogDetail from './BlogDetail.js/BlogDetail';
 
 function App() {
- 
   return (
+    <div className="App">
+   
+     <BrowserRouter>
+     <Navlink></Navlink>
 
-    <div>
-     
-      <BrowserRouter> 
-        <NavMeanu></NavMeanu>
-      <Switch>
-           <Route path='/header'>
-            <Header></Header>
+
+        <Switch>
+            <Route path='/home' >
+                <FirstCompo></FirstCompo>
             </Route>
-             <Route exact path='/'>
-                <Header></Header>
-            </Route> 
-            <Route path='/notfound'>
-                <NotFund></NotFund>
+            <Route path='/blog' >
+              <FirstCompo></FirstCompo>
             </Route>
             <Route path='/about'>
               <About></About>
             </Route>
-            <Route path="/:id">
-              <UserDetail></UserDetail>
+            <Route path='/contact'>
+                <Contact></Contact>
+            </Route>
+            <Route path='/:id' >
+                <BlogDetail></BlogDetail>
             </Route>
         </Switch>
-      </BrowserRouter>
-      
+     </BrowserRouter>
     </div>
-   
-  );         
-};
+  );
+}
 
 export default App;
-
-
 
 
